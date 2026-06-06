@@ -8,23 +8,22 @@
  *------------------------------------*/
 
 // Printer revision
-#define PRINTER_TYPE PRINTER_MK25S
-#define PRINTER_NAME PRINTER_MK25S_NAME
-#define PRINTER_NAME_ALTERNATE PRINTER_MK25_NAME //the other similar printer to this.
-#define PRINTER_MMU_TYPE PRINTER_MK25S_MMU2
-#define PRINTER_MMU_NAME PRINTER_MK25S_MMU2_NAME
-#define FILAMENT_SIZE "1_75mm_MK25S"
+#define PRINTER_TYPE PRINTER_MK25
+#define PRINTER_NAME PRINTER_MK25_NAME
+#define PRINTER_NAME_ALTERNATE PRINTER_MK25S_NAME //the other similar printer to this.
+#define PRINTER_MMU_TYPE PRINTER_MK25_MMU2
+#define PRINTER_MMU_NAME PRINTER_MK25_MMU2_NAME
+#define FILAMENT_SIZE "1_75mm_MK25"
 #define NOZZLE_TYPE "E3Dv6full"
 
 // Printer name
-#define CUSTOM_MENDEL_NAME "Prusa i3 MK2.5S"
+#define CUSTOM_MENDEL_NAME "Prusa i3 MK2.5"
 
 // Electronics
 #define MOTHERBOARD BOARD_RAMBO_MINI_1_3
 
 #define HEATBED_V2
 #define STEEL_SHEET
-//#define NEW_FIRST_LAYER_CAL //from front to back
 #define TACH0PULLUP
 
 // Uncomment the below for the E3D PT100 temperature sensor (with or without PT100 Amplifier)
@@ -123,7 +122,7 @@
 
 // Filament sensor
 #define FILAMENT_SENSOR
-#define FILAMENT_SENSOR_TYPE FSENSOR_IR
+#define FILAMENT_SENSOR_TYPE FSENSOR_PAT9125
 
 #define DEBUG_DCODE2
 #define DEBUG_DCODE3
@@ -498,24 +497,19 @@
 
 //#define SUPPORT_VERBOSITY
 
-#define MMU_CONFIG_FILE "mmu2/variants/config_MMU2S.h"
+#define MMU_CONFIG_FILE "mmu2/variants/config_MMU2.h"
 #define MMU_FILAMENT_COUNT 5
 #define MMU_FORCE_STEALTH_MODE
 #define MMU_DEBUG //print communication between MMU and printer on serial
 #define MMU_HAS_CUTTER
 
-// This is experimental feature requested by our test department.
-// There is no known use for ordinary user. If enabled by this macro
-// and enabled from printer menu (not enabled by default). It cuts filament
-// every time when switching filament from gcode. MMU_HAS_CUTTER needs to be
-// defined.
-
-//#define MMU_ALWAYS_CUT
-
 // MMU Error pause position
 #define MMU_ERR_X_PAUSE_POS 125
 #define MMU_ERR_Y_PAUSE_POS 0
 #define MMU_ERR_Z_PAUSE_LIFT 20
+
+//#define HEATBED_ANALYSIS //for meash bed leveling and heatbed analysis D-codes D80 and D81
+//#define MICROMETER_LOGGING //related to D-codes D80 and D81, currently works on MK2.5 only (MK3 board pin definitions missing)
 
 // Default Arc Interpolation Settings (Now configurable via M214)
 #define DEFAULT_N_ARC_CORRECTION       25 // Number of interpolated segments between corrections.
@@ -528,15 +522,5 @@
        calculated segment length is used. */
 #define DEFAULT_MIN_ARC_SEGMENTS 20 // The enforced minimum segments in a full circle of the same radius.  Set to 0 to disable
 #define DEFAULT_ARC_SEGMENTS_PER_SEC 0 // Use feedrate to choose segment length. Set to 0 to disable
-
-/*------------------------------------
- COMMUNITY FEATURES
- *------------------------------------*/
-
-//Show filename instead of print time after SD card print finished
-//#define SHOW_FILENAME_AFTER_FINISH
-
-//Remove the "AutoLoad filament" LCD menu entry if autoload is enabled.
-//#define REMOVE_AUTOLOAD_FILAMENT_MENU_ENTRY
 
 #endif //__CONFIGURATION_PRUSA_H
