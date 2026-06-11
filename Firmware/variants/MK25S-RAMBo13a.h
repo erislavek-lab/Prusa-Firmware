@@ -508,7 +508,7 @@
 #define MMU_ERR_Y_PAUSE_POS 0
 #define MMU_ERR_Z_PAUSE_LIFT 20
 
-//#define HEATBED_ANALYSIS //for meash bed leveling and heatbed analysis D-codes D80 and D81
+//#define HEATBED_ANALYSIS //for meash bed leveling, heatbed analysis D-codes D80 and D81
 //#define MICROMETER_LOGGING //related to D-codes D80 and D81, currently works on MK2.5 only (MK3 board pin definitions missing)
 
 // Default Arc Interpolation Settings (Now configurable via M214)
