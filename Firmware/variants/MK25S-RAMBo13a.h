@@ -110,7 +110,7 @@
 #define WATCHDOG
 
 // Fan check
-#define FANCHECK
+//#define FANCHECK
 
 // Safety timer
 #define SAFETYTIMER
