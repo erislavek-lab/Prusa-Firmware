@@ -121,8 +121,8 @@
 #define MENU_SERIAL_DUMP        // Enable "Memory dump" in Settings menu
 
 // Filament sensor
-#define FILAMENT_SENSOR
-#define FILAMENT_SENSOR_TYPE FSENSOR_PAT9125
+//#define FILAMENT_SENSOR
+//#define FILAMENT_SENSOR_TYPE FSENSOR_PAT9125
 
 #define DEBUG_DCODE2
 #define DEBUG_DCODE3
